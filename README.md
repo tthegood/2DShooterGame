@@ -30,30 +30,29 @@ Enday is a cross‑platform 2D shooter built with LibGDX. Jump into fast‑paced
 ```bash
 git clone https://github.com/tthegood/2DShooterGame.git
 cd 2DShooterGame
-Build & Run (Desktop)
-bash
-Copy
-Edit
+```
+
+### Build & Run (Desktop)
+```bash
 # Windows PowerShell
 .\gradlew.bat desktop:run
 
 # macOS / Linux
 ./gradlew desktop:run
+```
+
 This will download all dependencies (including LibGDX) and launch the desktop version.
 
-IDE Setup
-IntelliJ IDEA
-File ▶ New ▶ Project from Existing Sources ▶ select build.gradle ▶ Finish
-
-Eclipse
-File ▶ Import ▶ Gradle ▶ Existing Gradle Project ▶ select project root
+## IDE Setup
+- **IntelliJ IDEA**  
+  File ▶ New ▶ Project from Existing Sources ▶ select `build.gradle` ▶ Finish  
+- **Eclipse**  
+  File ▶ Import ▶ Gradle ▶ Existing Gradle Project ▶ select project root  
 
 Gradle will configure module paths and fetch dependencies automatically.
 
-Project Structure
-pgsql
-Copy
-Edit
+## Project Structure
+```
 2DShooterGame/
 ├── core/       # Shared game logic (entities, screens, input, buffs)
 ├── desktop/    # Desktop launcher and LWJGL3 backend
@@ -64,45 +63,37 @@ Edit
 ├── settings.gradle     # Includes core, desktop, html, ios modules
 ├── gradlew, gradlew.bat# Gradle wrapper executables
 └── LICENSE             # MIT License
-Configuration & Dependencies
-Module versions and dependencies are declared in the root build.gradle under shared ext properties:
+```
 
-LibGDX (gdxVersion), e.g. 1.11.0
-
-Extensions: Box2D, Ashley, AI, Bullet, Box2DLights, Controllers, FreeType
+## Configuration & Dependencies
+Module versions and dependencies are declared in the root `build.gradle` under shared `ext` properties:
+- **LibGDX** (`gdxVersion`), e.g. `1.11.0`  
+- **Extensions**: Box2D, Ashley, AI, Bullet, Box2DLights, Controllers, FreeType  
 
 Gradle pulls in the proper native libraries for each target automatically.
 
-Controls
-Action	Input
-Move	Arrow keys / WASD
-Shoot	Spacebar / Left‑click
-Pause	P
+## Controls
+| Action      | Input                 |
+|-------------|-----------------------|
+| Move        | Arrow keys / WASD     |
+| Shoot       | Spacebar / Left‑click |
+| Pause       | P                     |
 
-Check MyInputProcessor.java for the full input mapping.
+Check `MyInputProcessor.java` for the full input mapping.
 
-Contributing
-Fork this repo and create a feature branch:
-
-bash
-Copy
-Edit
-git checkout -b feature/YourFeature
-Implement your changes and commit:
-
-bash
-Copy
-Edit
-git add .
-git commit -m "Add feature: YourFeature"
-Push your branch and open a Pull Request on GitHub.
+## Contributing
+1. Fork this repo and create a feature branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+2. Implement your changes and commit:
+   ```bash
+   git add .
+   git commit -m "Add feature: YourFeature"
+   ```
+3. Push your branch and open a Pull Request on GitHub.
 
 Please follow existing code style and write clear, descriptive commit messages.
 
-License
-This project is licensed under the MIT License.
-
-makefile
-Copy
-Edit
-::contentReference[oaicite:0]{index=0}
+## License
+This project is licensed under the [MIT License](LICENSE).
